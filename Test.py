@@ -24,12 +24,28 @@ def increaseY(valuee):
   global y
   y += valuee
 
-
-
 for i in range(10):
   increaseX(i)
   if getODD(i):
     increaseY(round(i*sans.tan(i*192),3))
 
-
 print(x,y)
+
+myDomainRanking = [
+    ["I stole the #0 spot"],
+    ["Infinity Void", "Gojo Satoru"],
+    ["Malevolent Shrine", "Ryomen Sukuna"],
+    ["Yuji's Domain", "Yuji Itadori"],
+    ["Yuka's Domain", "Okotsu Yuta"],
+]
+
+myDomainRanking.append(["Gambling Power","Hakari"])
+# Nvm yuji's domain isn't confirmed
+myDomainRanking.remove(myDomainRanking[3])
+
+# Now we print the ranks
+for i in myDomainRanking:
+  indexer = myDomainRanking.index(i)
+  if indexer == 0:
+    continue
+  print(f"#{indexer}: {i[0]} by {i[1]}!!")
