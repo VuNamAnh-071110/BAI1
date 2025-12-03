@@ -7,6 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/17HSar55LtGz57Iz_fSkcRJxV55RmmQfs
 """
 
+# Tinh phuong trinh bac 2
 import math as m
 
 total = input("Enter three numbers (separted by space): ")
@@ -33,3 +34,52 @@ def formulaX(fNum, sNum, tNum):
 
 result, numbers = formulaX(a,b,c)
 print(result,numbers)
+
+# Tinh tong cac so thuc
+
+n = input("Nhap so thuc: ")
+n = n.split()
+s = 0
+
+try:
+  n = [float(x) for x in n]
+except:
+  print("ERROR")
+
+for i in n:
+  s += i
+
+print(f"Tong tat ca cac so thuc da neu o tren: {float(s)}")
+
+# Tinh tong cac so chan nho hon mot so nguyen duong
+
+sc = int(input("Nhap mot so duong: "))
+
+
+def getEvenNumberBelowChoosen(ChoosenNum):
+  evenNum = []
+  placeholder_num = 0
+
+  while placeholder_num < ChoosenNum:
+    if placeholder_num % 2 == 0:
+      evenNum.append(placeholder_num)
+    placeholder_num += 1
+
+  return evenNum
+
+s = 0
+
+if sc > 0:
+  nums = getEvenNumberBelowChoosen(sc)
+  try:
+    nums = [float(x) for x in nums]
+  except:
+    print("ERROR")
+
+  for i in nums:
+    s += i
+
+  print(f"The sum of 1 to {sc} is {s}.")
+else:
+  print("unvalid, number is not positive or is equal to zero.")
+
